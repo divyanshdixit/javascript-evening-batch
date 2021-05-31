@@ -1,0 +1,61 @@
+js => prog lang for web pages.(for behaviour of web pages)
+
+ES8 , ES6 (ECMA )
+
+
+WHAT JS CAN DO :
+
+change html content
+change html attributes values
+change css styles
+can show/hide html elements
+
+
+How we can write js:
+
+above the closing body tag
+</body>
+
+<head> </head>
+
+external script:
+
+1- use same code in diff pages
+2- spearate html and js code
+3- Cached js files can speed up page loads
+
+Note: script tag cant use in external script
+
+
+JS OUTPUT:
+
+console.log('helo');
+
+document.write() => testing 
+
+window.alert() or alert();
+
+writing into html element : document.getElementById('someid').innerHTML = 'output'
+
+
+github : verison control system
+
+Github command:
+
+git clone https://github.com/divyanshdixit/react-app-concepts.git
+
+git checkout -b "development" (for make a new branch)
+
+git checkout "main" (for switching to existing branch)
+
+git add .
+git commit -m "any commit message"
+git push
+git pull
+
+Conflicts:
+Automatic, manually
+
+Frontend:
+
+React, redux, webpack, ajax, ES6.
