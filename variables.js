@@ -67,5 +67,87 @@ let g = 3; // not allowed
     let g = 5; // not
 }
 
-
 // Re-declare a "let" variable with "var" in same scope and block
+
+let x = 2; 
+var x = 3; // Not allowed
+
+{
+    let x = 4;  
+    var x = 5; // not allowed
+}
+
+// Re-declare variable with "let" in another scope or block is allowed:
+
+let x = 2;
+
+{
+    let x = 3;
+    console.log(x) // 3
+}
+
+console.log(x) // 2
+{
+    let x = 5;
+    console.log(x)
+}
+
+
+// Hoisting: 
+
+// var => top hoisted, can be initalised at any Time
+
+// can be use the variable before it is declared
+a = 10;
+console.log(a)
+var a;
+
+// hoisting using let: hoisted on top but not initalized
+
+fname = "Divyansh";
+console.log(fname);
+let fname; // gives reference error
+
+
+// Const:  
+// let name;
+// var name;
+// const name = "Divyansh"
+
+// it defines a constant reference to value (that's why we cant change the primitive value but we can change the props of const object)
+
+var x = 10;
+{
+    const x = 20;
+console.log(x)  // 20
+}
+
+// Primitive value: that has single data value not have props or methods
+// Number, strings, boolean, undefined
+
+// var obj1 = {
+//     key : value
+// }
+
+const person = {
+    name:"Divyansh",
+    city:"kanpur",
+    age: 25
+}
+
+person.name = "kishu";
+
+console.log(person.name)
+
+
+// Re-decalre "var" or "let " variable with const in same block or scope is not allowed
+
+var e = 10;
+let e = 20; // not allowed
+const e = 30; // not allowed
+
+
+// Const hoisting: varianle define with "const" are also hoisted on top but not initialised so gives referenceError
+
+alert(fname);
+const fname = "kishu";
