@@ -115,3 +115,26 @@ console.log(person5.fullName());
 // var person = { // 
 //     "name":"Divyansh"
 // }
+
+// Js object cant be compared it always gives you false:
+var x = "a" // 2000 => a
+var obj1 = {
+    color:"black"
+}
+
+var obj2 = {
+    color:"black"
+}
+
+console.log(obj1 == obj2); // false
+
+var obj3 = obj1; // 2001 => a
+
+console.log(obj1 == obj3); // true
+
+obj1.color = "blue";
+
+obj3.color = "red";
+
+console.log(obj3.color)
+console.log(obj1.color)

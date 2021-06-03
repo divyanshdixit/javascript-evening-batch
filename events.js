@@ -15,11 +15,11 @@
 
 // <button onclick="alert('hello')"> Click me </button>
 
-<button onclick="myfunction()"> Click Me </button>
+{/* <button onclick="myfunction()"> Click Me </button>
 
 function myfunction(){
     alert()
-}
+} */}
 
 // onchange
 // onclick
@@ -29,3 +29,22 @@ function myfunction(){
 // onmouseover
 // onmouseout
 
+function changeContent(){
+    document.getElementById('div1').innerHTML = "Clicked";
+}
+
+function changeColor(){
+    document.getElementById('div1').style.color = "blue";
+}
+
+function reverseColor(){
+    document.getElementById('div1').style.color = "black";
+}
+
+var changeValue = () => {
+    console.log(document.getElementById('div1').innerHTML);
+}
+
+var changeInput = () => {
+    console.log(document.getElementById('input_field').value)
+}
