@@ -7,11 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+   
     <div id="statement"></div>
-    <div id="div1" class="control" onmouseover="changeColor()" onmouseout="reverseColor()" onchange="changeValue()">  Div1 </div>
+    <p onclick="paraClick()" id="para"> .</p>
+    <div id="div1" onmouseover="changeColor()" onmouseout="reverseColor()" onchange="changeValue()">  Div1 </div>
     <button type="button" onclick="changeContent()" > Click me </button>
-    <input type="text" value="" id="input_field" onchange="changeInput()"/>
+    <input type="text" value="" id="input_field" onchange="changeInput()" />
+
+    <textarea rows="5" cols="10" value="" id="texta"> sadasdsada </textarea>
+    <button type="button" onclick="input_btn()"> Change input </button>
+
+    <select id="select_val" onchange="getValue()">
+        <option value="0"> --select-- </option>
+        <option value="one"> One </option>
+        <option value="two"> Two </option>
+        <option value="three"> Three </option>
+    </select>
     <!-- <script src="./index.js"></script> -->
     <!-- <script src="./variables.js"></script> -->
     <!-- <script src="./const.js"></script> -->
@@ -20,6 +31,7 @@
     <script src="./object.js"></script>
     <script src="./events.js"></script>
     <script src="./string.js"></script>
+    <script src="./stringMethod.js"></script>
 
 </body>
 </html>

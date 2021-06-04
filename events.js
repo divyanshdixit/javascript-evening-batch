@@ -48,3 +48,28 @@ var changeValue = () => {
 var changeInput = () => {
     console.log(document.getElementById('input_field').value)
 }
+
+function paraClick(){
+    document.getElementById('para').innerHTML = "para Clicked";
+}
+
+function getValue(){
+    console.log(document.getElementById('select_val').value)
+}
+
+function input_btn(){
+    
+    var val = document.getElementById('input_field').value;
+    console.log(val);
+    console.log(typeof val);
+    var valNum = parseInt(val);
+    console.log(valNum);
+    console.log(typeof valNum)
+    return ;
+    if(typeof document.getElementById('input_field').value !== "number" && valNum == NaN){
+        alert('wrong input')
+    }else{
+        document.getElementById('input_field').value = "correct value";
+    }
+    
+}

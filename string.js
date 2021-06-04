@@ -22,7 +22,7 @@ var x = new String("adasds"); // typeof object
 
 // break the long code after the operator , 
 // if operaot ris not there then use (+) 
- var x = document.getElementById('id').innerText = 'asdasd';
+//  var x = document.getElementById('id').innerText = 'asdasd';
 
 
 //  String Method:
