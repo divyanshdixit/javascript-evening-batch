@@ -1,5 +1,7 @@
 var str = "something good has good to happen";
 
+// strings are immutable(not change)
+
 // 1 - find the length > str.length
 
 // ********
@@ -37,7 +39,7 @@ console.log(str.search("good"));
 /*
     slice(start, end) 
     substring(start, end) => -ve values are not accpeted in substring() like slice()
-    substr(start, lenth)
+    substr(start, lenth) => similar to slice but second param specifies the length of extracted part
 */
 
 
@@ -59,4 +61,100 @@ console.log(str.slice(-10, -4));
 var str1 = "My name is Divyansh";
 console.log(str1.slice(-12, -6));
 console.log(str1.slice(-16)); // if second param is omiited then it take to end of the string
+
+
+// substr() 
+
+// second param is length of extracted part u want
+// if second param is omitted the it'll slice out the rest of string
+// if first param is -ve count start from end of the string
+
+console.log(str1.substr(3, 7)) 
+console.log(str1.substr(-12, 7)) 
+
+
+// *****
+// Replace string content:
+
+// replace("what to replace", "replace with")
+//  it doesn't change the original string , retunr new string
+// case senstive , replace only first match by default
+
+var str2 = "something Good has good to happen";
+
+console.log(str2.replace("good", "bad"))
+
+// for case senstivie replace and for all replace use regualr expression
+
+// i for check case senstive
+console.log(str2.replace(/good/i, "fff"))
+
+// to replace all - use g for global match
+console.log(str2.replace(/good/g, "fff"))
+
+
+// ******
+// covert in upper case and lower case
+
+// toUpperCase() 
+console.log(str2.toUpperCase())
+
+// toLowerCase()
+console.log(str2.toLowerCase())
+
+
+// concat() => use to concat two or more strings
+var fname = "Divyansh Dixit";
+
+console.log(fname.concat(" Dixit" , " ", " is ", ))
+
+
+// trim() => remove the white spaces from the both end of the string:
+var str = "               adhasjds         "
+console.log(str);
+console.log(str.trim());
+
+
+// *****
+// extracting string char:
+
+// charAt(position) => return char at given position
+// if index not found the return empty string
+
+// charCodeAt() => return unicode of char at speicifed index
+// if index not found then return NaN 
+
+console.log(fname.charAt(5)) 
+
+// if index is not found the it reutrn undefined
+console.log(fname[10]) // => read only purpose
+
+console.log(fname.charCodeAt(5))
+console.log(fname.charCodeAt(10)) // NaN
+
+
+// **** 
+// Convert string into Array: using split("seprator")
+
+var random = "a b,c ,d, e"
+console.log(fname.split(",")) 
+
+console.log(fname.split("")) 
+// if seperator is missing then it'll treat whole string as a single element in array
+console.log(fname.split()) 
+
+
+// Prototype Property => to add new property or method to all objects of given types:
+
+
+function employee(names, citys, ids){
+    this.name = names;
+    this.city = citys;
+    this.id = ids;
+}
+
+var emp1 = new employee('div', 'kanpur', 1)
+
+employee.prototype.salary = 2000;
+
 
