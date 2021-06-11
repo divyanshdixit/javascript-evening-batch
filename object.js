@@ -11,7 +11,7 @@
 
 var name = "Divyansh";
 var city = "kanpur";
-
+var person = ["Divyansh", "K"]
 var person = { // Object literals
     name:"Divyansh", // key:value
     city:"kanpur"
