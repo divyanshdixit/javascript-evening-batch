@@ -76,23 +76,166 @@ var arr2 = [5,3,4, 3,4,5,6, 10] // [3,5,4]
 
 console.log(arr2[arr2.length - 1])
 
-var sortedArr = arr2.sort();
-console.log(sortedArr);
+// asscending , descending 
+
+// var sortedArr = arr2.sort();
+// console.log(sortedArr);
 
 // [3,4,5]
+
+var array1 = [10,1, 2, 7, 50, 6]; // [1,2,6,7,10,50]
+
+var array2 = ['Aishu', 'Divyansh', 'abhi'];
+
+console.log(array1.sort()); 
+console.log(array2.sort()); 
+
+// sort function sorted the array by unicode of element in accesnding order
+
+// first solution 
+
+/*
 function sort(arr){
-    var givenArr = arr;
-    for(var i =0; i<arr.length; i++){ // i = 1
-        if(arr[i] < arr[i+1]){ // 5 < 3 // 3 < 4
-            continue;
-        }else{
-            var temp = arr[i]; // temp = 5
-            arr[i] = arr[i+1]; // arr[i] = 3
-            arr[i+1] = temp; // arr[j] = 5
+    var i,j;
+    for(i=0; i<arr.length;i++){
+        for(j=i+1;j<arr.length;j++){
+            if(arr[i] < arr[j]){
+                continue;
+            }else{
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
     }
-    return arr;
-
+return arr ;
 }
 
-sort([3,2,1]);
+console.log(sort([3,2,1]));
+
+// second solution 
+
+function sortedArray(array) {
+    var done = false;
+    while (!done) {
+      done = true;
+      for (var i = 1; i < array.length; i++) {
+        if (array[i - 1] > array[i]) {
+          done = false;
+          var tmp = array[i - 1];
+          array[i - 1] = array[i];
+          array[i] = tmp;
+        }
+      }
+    }
+    return array;
+  }
+
+  console.log(sortedArray([3,2,1]))
+
+  var arr4 = ["divyansh", "abhishek", "tulika"];
+  console.log(arr4.sort());
+
+  var arr5 = [10,1,0,40,5,4];
+  console.log(arr5.sort())
+
+//   -1 => a comes first
+// 1 => b comes first
+//  0 => no change
+
+  arr5.sort(function(a,b){
+      return -(a - b);
+  })
+  console.log(arr5);
+
+//   sort in descending order:
+
+arr4.sort((a,b) => {
+    if(a>b){
+        return -1;
+    }
+    if(b>a){
+        return 1;
+    }
+    return 0;
+})
+console.log(arr4);
+
+// sorting array with mixed cases
+
+var arr6= ['Cat', 'dog', 'Elephant', 'bee', 'ant'];
+
+arr6.sort(function (a, b) {
+    let x = a.toLowerCase(),
+        y = b.toLowerCase();
+    if(x == y){
+        return 0;
+    }
+    if( x > y){ // a> b
+        return 1;
+    }
+    if(x < y){
+        return -1;
+    }
+
+});
+
+console.log(arr6)
+
+*/
+
+// *******
+// Looping the array elements:
+
+// use for loop
+// Array.forEach()
+
+var gh = ['item1', 'item2', 'item3'];
+
+for(var f=0; f < gh.length ; f++){ // f = 0, 1
+    console.log(gh[f]) // item1
+}
+
+// forEach() 
+var items = ['item1', 'item2', 'item3', 'item4',];
+
+// callback => that function which call inside other function
+
+// Array_name.forEach(function(value){})
+
+items.forEach( function(val, index, arr){
+    console.log(val, index, arr);
+});
+
+
+// adding array elements:
+
+// push() => add the element in the last 
+
+// items[length] = 'newItem';
+
+items[4] = 'item5';
+items.push('item6');
+
+// it'll create undefined holes
+
+// items[10] = "item10";
+// console.log(items[7]);
+console.log(items);
+
+
+// how do we know if a varaible is an array:
+
+// isArray() => retunr true or false  => Array.isArray(items)
+// customzied isArray()
+// instanceof => return true if an object is created by a given constructor
+
+// ES5
+console.log(Array.isArray(items))
+
+// 
+console.log(items instanceof Array);
+
+// *****
+
+// JS Array const 
