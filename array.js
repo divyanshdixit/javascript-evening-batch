@@ -238,4 +238,26 @@ console.log(items instanceof Array);
 
 // *****
 
-// JS Array const 
+// JS Array const:
+
+const arrconst = [1,2,3,4];
+
+// const define a constant referrence to any array
+// so we can still change the elementsof an array 
+
+arrconst[0] = 10; // change
+
+arrconst[4] = 50; // add
+arrconst.push(60);
+console.log(arrconst)
+
+const sarr = [3,4,5,6];
+console.log(sarr);
+
+{
+    const sarr1 = [4,7];
+    console.log(sarr, sarr1);
+}
+
+// sarr1.push(8)
+console.log(sarr, sarr1);
