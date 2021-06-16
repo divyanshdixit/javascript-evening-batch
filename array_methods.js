@@ -110,3 +110,31 @@ var arr7 = [1,2,3,4,5,6];
 
 console.log(arr7.slice(2,4))// 3,4
 console.log(arr7.slice(1))
+
+// find Max and min from array
+
+var arru = [1,5, 0, -1, 67, 55] // 5
+
+
+var min = Infinity; //100 
+var max = -Infinity; // -
+
+for(var i=0;i<arru.length;i++){ // i =0
+    if(arru[i] < min){ // 1 < 100, 5<1, 0<1, 67<-1 55<-1
+        min = arru[i]; // 1
+    }
+    if(arru[i] > max){ //  
+        max = arru[i];
+    }
+}
+
+console.log(min, max);
+
+// using inbuilt function (Math)
+// spread operator
+
+console.log(Math.min(...arru));
+console.log(Math.max(...arru));
+
+
+// Construtor property:
