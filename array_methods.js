@@ -137,4 +137,130 @@ console.log(Math.min(...arru));
 console.log(Math.max(...arru));
 
 
-// Construtor property:
+// Construtor property :-
+
+// return an constur function.
+
+// for array: function Array(){[native code]}
+
+var arrb =[1,2,3];
+
+console.log(arrb.constructor)
+// for Number: function Number(){[native code]}
+
+// we can use const property to check if a varible is an array.
+
+function check(x){
+    return x.constructor.toString().indexOf('Array') > -1;
+}
+
+console.log(check(arrb));
+
+
+// Prototype property:- 
+
+Array.prototype.customArrayFunction = (arr) => {
+    return arr;
+}
+
+// console.log(Array.customArrayFunction(arrb));
+
+
+// CopyWithin() => 
+// copies array element to another position in same array , overwrite the existing element
+// chnages the original array
+
+var arrv= [1,2,17,24,21,0];
+
+// copyWithin(target, start, end)
+// target => index positions to copty the element to 
+// start => start copying from
+// end => array.length, stop copyin elements from
+
+console.log(arrv.copyWithin(2,0,3))
+console.log(arrv.copyWithin(2,0))
+
+
+// entries: return Array iteretor object with key/vlaue pairs
+
+var x = (arrv.entries())
+
+for(i of x){
+    console.log(i); // [index, value]
+}
+
+
+// every() =>
+//  check if every element in array pass test.
+// if any return vlaues is false then every() fun return false else true.
+
+var res = arrv.every(function(val){
+    return val>18;
+})
+console.log(res);
+
+
+// filter() , map(), forEach()=> 
+
+// filter => return an array filled with all array elements that passes test(condition).
+
+var arrt = [1,2,34,23,17,18, 10];
+console.log(arrt.filter(function(currentVal){
+    return currentVal >= 18;
+}))
+
+
+// forEach() => call the function for each array elements
+
+arrt.forEach(function(val, index, arr){
+   console.log( val * 2);
+});
+
+
+// map()=> return an array with result of calling a function for each element of array.
+console.log('**********************');
+
+console.log(arrt.map(function(val, index, arr){
+    return val*2;
+}))
+
+// find() => return the value of first element in array taht pass a test.
+
+console.log(arrt.find( (val, index, arr) => {
+    return val >=18
+}))
+
+
+// findIndex() => return the index of first element in array taht pass a test.
+
+console.log(arrt.findIndex( (val, index, arr) => {
+    return val >=18
+}))
+
+// includes(), keys(), reverse(), reduce()
+
+// includes() => whether an array elements contains a specific element
+// return true if elements exist else false
+// case senstive 
+
+// arr.includes(element, start=>optional)
+
+console.log(arrt.includes(5))
+
+console.log(arr.includes('divyansh'))
+
+// keys() => return a array iterator object only containing keys of an array
+
+var y = arrt.keys();
+for(i of y){
+    console.log(i);
+}
+
+
+// reverse() => given array will be reversed
+// change the original array
+
+console.log(arrt.reverse())
+
+
+// Reduce():
