@@ -263,4 +263,5 @@ for(i of y){
 console.log(arrt.reverse())
 
 
-// Reduce():
+// Reduce():-
+
