@@ -263,5 +263,31 @@ for(i of y){
 console.log(arrt.reverse())
 
 
-// Reduce():-
+// Reduce():- redcueRight()
 
+// reduces the array to a single value 
+// excute a provided function for each value of the array(left to right)
+// return the value of the function is stored in an accumulator (result , total)
+// doesn't change the original array
+
+// initialvalue or previosly returned vaue of the function
+// syntax:
+
+// array_name.reduce(function(total, val, index, arr){
+
+// }, initialvalue)
+
+// total and val are required
+
+var num = [1,2,3,4,5];
+var init = 0
+
+console.log(num.reduce(function(total, val){
+    return total + val;
+},init))
+
+
+console.log(num.reduce(function(total, val){
+    console.log(total, val);
+    return total - val;
+}))
