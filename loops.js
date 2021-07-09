@@ -161,4 +161,30 @@ while(k){
 }
 console.log('object')
 
+
 // Break and continue:
+
+// jumps out of the loop- Break
+
+// jumps over one iteration in the loop - continue
+
+for(let g = 0; g < arr.length; g++){
+
+    if( g == 1 ){ // 1==1
+        // break;
+        continue;
+    }
+    console.log(arr[g])
+}
+
+// label reference => use break using label reference 
+
+list:{
+    console.log(arr[0]);
+    console.log(arr[1]);
+    break list;
+    console.log(arr[3]);
+}
+
+null == undefined (true)
+null === undefined (false)

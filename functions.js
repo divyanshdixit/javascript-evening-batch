@@ -34,3 +34,23 @@ var add = addition(1,2)
 
 //  returned value will go back to function call.
  console.log(add);
+
+
+//  
+
+namesss();
+// console.log(fname);
+function namesss(){
+    fname = "Divyansh"; // function local to the function 
+    console.log(fname)
+}
+
+// var name = "adasd";
+// console.log(window.name);
+
+// let name = "adasdad";
+// console.log(window.name);
+
+// automatically global scope
+
+console.log(fname);
