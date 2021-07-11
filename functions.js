@@ -54,3 +54,13 @@ function namesss(){
 // automatically global scope
 
 console.log(fname);
+
+
+// functions are variables too 
+// object and function too
+
+age = function(){
+
+}
+
+age();

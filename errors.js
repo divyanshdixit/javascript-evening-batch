@@ -21,13 +21,16 @@ console.log(err.message);
 // Example:
 // Divyansh
 
+
+// finally : let' you excute the block of code after try and catch regardless of the result.
+
 function errorGenerater(){
     let e = document.getElementById('error_demo').value;
     try{
         if(e == ""){
             throw "Please enter any value";
         }
-        if(!isNaN(e)) throw "Please enter only string";
+        if(!isNaN(e)) throw "Please enter only string (ERR002)";
 
         if(e.length > 8) throw "Please enter less than 8 digits";
 
@@ -36,6 +39,7 @@ function errorGenerater(){
         if(e.length < 8 && e.length > 2) throw "";
 
     }catch(error){
+        // DOM
         document.getElementById('error_message').innerHTML = error;
     }
     finally{
@@ -47,9 +51,10 @@ function errorGenerater(){
 
 /*
 
-TypeError:
-ReferenceError:
+TypeError: data type
+ReferenceError: using a vairable with giving any reference
 SyntaxError:
-rangeError:
-uriError
+rangeError: out of range in number
+uriError : error in decoding uri 
+
 */

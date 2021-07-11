@@ -38,6 +38,26 @@ window.alert() or alert();
 writing into html element : document.getElementById('someid').innerHTML = 'output'
 
 
+
+js syntax:
+
+3 set of rules:
+Declare a vraible (var , let , const) var x, let y , const z, var x,y,z
+assign value or define the varaible x = 6; y =10;
+computation z = x+y; 16 (x is undefined)
+var x = 10;
+
+fixed, varaibles
+
+
+
+
+numbers, string: , "", ''
+10, 10.52
+var x = 10;
+
+var x = 1 ; var y =  '2';
+
 github : verison control system
 
 Github command:

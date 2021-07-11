@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script></script>
 </head>
 <body>
+
+    <scipt>
+
+    </scipt>
    
     <!-- <div id="statement"></div>
     <p onclick="paraClick()" id="para"> .</p>
@@ -24,9 +30,14 @@
         <option value="three"> Three </option>
     </select> -->
 
+    <p id="demo" class="anything"> </p>
     <input type="text" id="error_demo"/>
 
-    <button type="button" onclick="errorGenerater()"> Test </button>
+    .active{
+        display:none
+    }
+
+    <button type="button" class="btn btn-primary" onclick="errorGenerater()" style=""> Test </button>
 
     <span id="error_message"> </span>
 
@@ -45,6 +56,14 @@
 
     <!-- <script src="./loops.js"></script> -->
     <script src="./errors.js"></script>
+
+    <script src="./this.js"> </script>
+
+    <!-- remove and add class -->
+    <script>
+        document.getElementById('demo').innerHTML = "asdasasdgasdfasjdasydfsjdf"
+        document.getElementById('demo').classList.add('anything');
+    </script>
 
 
 </body>
