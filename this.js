@@ -35,4 +35,35 @@ function fun(){
     "use strict";
     return this;
 }
-console.log(fun())
+console.log(fun());
+
+// 4-  this is event handler:
+// this refers to html element that recives event
+
+{/* <button onclick="this.style.color='red'"> Click to remove </button> */}
+
+
+// 5- explicit function binding:
+
+// call(), apply()
+// used to call an object method with another object passed as an argument:
+
+const p1 = {
+    fullName:function(){
+        return this.fname + ' ' + this.lname;
+    }
+}
+
+const p2 = {
+    fname:"Divyansh",
+    lname:"Dixit"
+}
+
+console.log(p1.fullName.call(p2));
+
+// json => javascript object notation
+
+// format for storing and tranforming data:
+// used when data is sent from server to web pages 
+
+

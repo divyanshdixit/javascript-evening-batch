@@ -31,15 +31,13 @@
     </select> -->
 
     <p id="demo" class="anything"> </p>
-    <input type="text" id="error_demo"/>
+    <input type="text" id="error_demo" onchange="this.style.textTransform='uppercase'"/>
 
-    .active{
-        display:none
-    }
-
-    <button type="button" class="btn btn-primary" onclick="errorGenerater()" style=""> Test </button>
+    <button type="button" class="btn btn-primary" onclick="errorGenerater()"> Test </button>
 
     <span id="error_message"> </span>
+
+    <button onclick="this.style.color='red'"> Click to remove </button>
 
     <!-- <script src="./index.js"></script> -->
     <!-- <script src="./variables.js"></script> -->
