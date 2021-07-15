@@ -40,7 +40,9 @@ console.log(fun());
 // 4-  this is event handler:
 // this refers to html element that recives event
 
-{/* <button onclick="this.style.color='red'"> Click to remove </button> */}
+// onclick, handler(function);
+
+<button id="btn" onclick="this.innerHTML = 'REMOVED'"> REMOVED </button>
 
 
 // 5- explicit function binding:
@@ -65,5 +67,3 @@ console.log(p1.fullName.call(p2));
 
 // format for storing and tranforming data:
 // used when data is sent from server to web pages 
-
-
