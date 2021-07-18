@@ -42,11 +42,11 @@ class person{
 
 // using a class to create an object
 
-let p1 = new person('divyansh', 1995)
-let p2 = new person('abhishek', 2000)
+let p1 = new person('divyansh', 1995);
+let p2 = new person('abhishek', 2000);
 
 let date = new Date();
 let currentYear = date.getFullYear();
 
 console.log(p1.age(currentYear));
-// console.log(p2.age());
+console.log(p2.age(currentYear));

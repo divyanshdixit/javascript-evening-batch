@@ -62,8 +62,3 @@ const p2 = {
 }
 
 console.log(p1.fullName.call(p2));
-
-// json => javascript object notation
-
-// format for storing and tranforming data:
-// used when data is sent from server to web pages 

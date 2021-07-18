@@ -3,13 +3,15 @@
 // objects are variable too which  can hold many values
 // objects has properties and methods
 
+// primitive values are immutable
+// complex value are mutable 
 
 // Rule: Dont declare string, number and boolean as an object
 
 //  when js variable is declared with the keyword "new" the variable is created an object
 // var x = new AnyFunctionName() => here x is treated as an object
 
-var name = "Divyansh";
+var name = "Divyansh"; // x = 5
 var city = "kanpur";
 var person = ["Divyansh", "K"]
 var person = { // Object literals
