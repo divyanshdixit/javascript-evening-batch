@@ -82,7 +82,9 @@ f.getName()
 
 // Displaying object properties:
 
-// Object.values() => any js object can be converted to array using Object.values()
+// Object.values() => 
+// any js object can be converted to array using Object.values()
+// get the values of all props and return as an array 
 
 console.log(Object.values(f))
 
@@ -101,6 +103,12 @@ const arr = ['divy', 'dixit', 24]
 console.log(arr);
 console.log(JSON.stringify(arr))
 
+for(let i in obj.hobbies){
+    console.log(obj.hobbies[i].name)
+    for(let x in obj.hobbies[i].categories){
+        console.log(obj.hobbies[i].categories[x]);
+    }
+}
 /*
 
 const person = {
