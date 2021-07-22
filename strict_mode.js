@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // secured js 
 // new in ES5 
@@ -11,13 +11,13 @@
 // }
 
 // var myfun = function(){
-//     var x = 1;
+    // var x = 1;
 //     console.log(x);
 // }
 
 // myfun();
 
-x = 11;
+var x = 11; // x is not defined
 console.log(x);
 function myfun2(){
     "use strict";

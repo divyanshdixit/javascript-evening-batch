@@ -14,6 +14,7 @@
 const p = {
     name:"Divyanh",
     city:"",
+    lname:"Dixit",
 
     get fullName(){ // work as a prop
         return this.name;
@@ -25,15 +26,28 @@ const p = {
 
     set setCity(cityname){
         this.city = cityname;
+    },
+
+    get UserDetails(){
+        return this.name + ' ' + this.lname + ' ' + this.city
+    },
+
+    set ChangeLname(newLname){
+        this.lname = newLname;
     }
+
 }
+
+var arr = ['dixit', 'dixit2', 'dixit3'];
 
 // console.log(p.getName());
 console.log(p.fullName);
 console.log(p.cityName); // ''
 p.setCity = "new city";
-
 console.log(p.cityName);
+console.log(p.UserDetails);
+p.ChangeLname = "ddd"
+
 /*
 
 const a = "a";

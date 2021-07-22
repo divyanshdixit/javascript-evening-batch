@@ -1,6 +1,6 @@
 js => prog lang for web pages.(for behaviour of web pages)
 
-ES8 , ES6 (ECMA )
+ES8(2020) , ES6(2015) Es5 (2009) (ECMA )
 
 
 WHAT JS CAN DO :
@@ -39,7 +39,7 @@ writing into html element : document.getElementById('someid').innerHTML = 'outpu
 
 
 
-js syntax:
+js syntax: 
 
 3 set of rules:
 Declare a vraible (var , let , const) var x, let y , const z, var x,y,z
@@ -50,13 +50,27 @@ var x = 10;
 fixed, varaibles
 
 
+var name = "Divyansh"; // string data type
 
+var x,y,z;
+x=10; // primitive
+x = 16;
+var x= 10;
+
+z = x+y;
+
+var obj = { // complex data type
+    name:'Divyansh'
+}
+
+obj.name = "abhishek";
+obj = null;
 
 numbers, string: , "", ''
 10, 10.52
-var x = 10;
+var x = 10.53;
 
-var x = 1 ; var y =  '2';
+var x = 1 ; var y =  "2";
 
 github : verison control system
 

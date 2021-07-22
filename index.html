@@ -6,14 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script></script>
+    <script> 
+      console.log('asdasdd');
+    </script>
+
+    <style>
+        .collapse.show{
+            display: block;
+            /* transition:all 1s ease-in-out; */
+            /* behavior: smooth; */
+            /* -webkit-transition:5s; */
+        }
+        .collapse{
+            display: none;
+            transition:all 2s ease-in-out;
+            height: 150px;
+
+            /* behavior: smooth; */
+            /* -webkit-transition:5s; */
+        }
+        .transform-active {
+            height: 200px;
+            }
+        
+        .not_active{
+            display: none!important;
+        }
+    </style>
 </head>
 <body>
 
-    <scipt>
+  <script>
 
-    </scipt>
-   
+  </script>
+
+        <div class="card">
+          <div class="card-header" id="headingOne">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Collapsible Group Item #1
+              </button>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Collapsible Group Item #2
+              </button>
+            
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Collapsible Group Item #3
+              </button>
+            
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      
+        <script>
+        var x = document.querySelectorAll('.btn-link');
+        
+        var myfunction = function(hh){
+            var getFirstBtnParent = this.parentElement.parentElement.getElementsByClassName('collapse')[0];
+            if(getFirstBtnParent.classList.contains('show')){
+                getFirstBtnParent.classList.remove('show')
+                getFirstBtnParent.classList.add('transform-active');
+            }else{
+                var y = document.querySelectorAll('.collapse')
+                y.forEach(c => {
+                    c.classList.remove('show');
+                })
+                hh.target.parentElement.parentElement.getElementsByClassName('collapse')[0].classList.add('show')
+                hh.target.parentElement.parentElement.getElementsByClassName('collapse')[0].classList.remove('transform-active')
+            }
+            
+            // hh.target.addEventListener('click', function(event){
+            //     // console.log(event);
+            //     this.parentElement.parentElement.getElementsByClassName('collapse')[0].classList.toggle('show');
+            //     // this.parentElement.parentElement.getElementsByClassName('collapse')[0].classList.remove('not_active');
+            // })
+            
+        };
+
+        x.forEach((button) => {
+            button.addEventListener('click', myfunction)
+        });
+
+        </script>
     <!-- <div id="statement"></div>
     <p onclick="paraClick()" id="para"> .</p>
     <div id="div1" onmouseover="changeColor()" onmouseout="reverseColor()" onchange="changeValue()">  Div1 </div>
@@ -30,14 +130,14 @@
         <option value="three"> Three </option>
     </select> -->
 
-    <p id="demo" class="anything"> </p>
+    <p id="demo" class="show" style="color:red"> </p>
     <input type="text" id="error_demo" onchange="this.style.textTransform='uppercase'"/>
 
     <button type="button" class="btn btn-primary" onclick="errorGenerater()"> Test </button>
 
     <span id="error_message"> </span>
 
-    <button onclick="this.style.color='red'"> Click to remove </button>
+    <button onclick="this.style.color='red'"> Show/Hide </button>
 
     <!-- <script src="./index.js"></script> -->
     <!-- <script src="./variables.js"></script> -->
@@ -52,10 +152,10 @@
     <script src="./array.js"></script>
     <script src="./array_methods.js"></script> -->
 
-    <!-- <script src="./loops.js"></script> -->
-    <script src="./errors.js"></script>
+    <script src="./loops.js"></script>
+    <!-- <script src="./errors.js"></script> -->
 
-    <script src="./this.js"> </script>
+    <!-- <script src="./this.js"> </script> -->
 
     <!-- remove and add class -->
     <script>
