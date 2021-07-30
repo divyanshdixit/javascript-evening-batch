@@ -9,7 +9,7 @@ var f = 10
 
 25 + "Divyanhs" => 25Divyansh
 
-25+25 => 50
+
 
 25 + 25 + "Divyansh" + 25 + 25 => 50Divyansh2525
 

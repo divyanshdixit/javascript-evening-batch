@@ -14,9 +14,12 @@ function Person(f, l, a, c){
     this.lname = l;
     this.age   = a;
     this.color = c;
+    // this.size = s;
 }
 
-// we can't add prop or method from outside the const fucntion:
+// Person.prototype.size = '20'
+
+// we can't add prop or method from outside the constr fucntion:
 
 // Person.city = "lko" (not possible)
 
@@ -54,35 +57,40 @@ function Person(f, l, a, c){
 // for adding we need to use prototype:
 
 // Prototype: All Js objects inherit props and methids from a prototype
+// so we can add new prop and methods using prototype
 
+// adding new prop:
 Person.prototype.size = '10';
+
+// adding new mehtod using prototype
 Person.prototype.getName= function () {
     return this.fname + this.lname
 }
+
 const obj1 = new Person('div','dixit', 25,'fair')
 const obj2 = new Person('div1','dixit1', 26,'fair1')
 
+console.log(obj1, obj2)
 obj2.size = "20";
 
 console.log(obj1.size, obj1.getName(), obj2.size)
 
 // Prototype: run, walk, stand
 
-// const f = {
-//     name:'adsasd',
-//     getName:function(){
+const f = {
+    name:'adsasd',
+    getName:function(){
 
-//     },
-    
-// }
+    },
+} 
 
-// const g = {
-//     fname:'adsasd',
-//     getCity:function (params) {
+const g = {
+    fname:'adsasd',
+    getCity:function (params) {
         
-//     }
-// }
+    }
+}
 
-// const h = {
-//     lname:'adsasd'
-// }
+const h = {
+    lname:'adsasd'
+}

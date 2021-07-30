@@ -10,6 +10,7 @@ change html attributes values
 change css styles
 can show/hide html elements
 
+BOM
 
 How we can write js:
 
@@ -27,19 +28,32 @@ external script:
 Note: script tag cant use in external script
 
 
+<p id="someid" >  </p>
+
 JS OUTPUT:
 
-console.log('helo');
+console.log('helo', '' ,'sadasdas'); // testing, debugging
 
-document.write() => testing 
+document.write('hello') => testing 
 
 window.alert() or alert();
 
 writing into html element : document.getElementById('someid').innerHTML = 'output'
 
+DOM 
 
+js syntax:
 
-js syntax: 
+int char float
+
+var x = "10" (Number) , ' ', " "(string)
+
+var y;
+y = 10;
+
+var y = 10;
+
+"use strict";
 
 3 set of rules:
 Declare a vraible (var , let , const) var x, let y , const z, var x,y,z
@@ -49,19 +63,30 @@ var x = 10;
 
 fixed, varaibles
 
+ x = 10;
+var hy = 20;
 
-var name = "Divyansh"; // string data type
+
+var name = '10'; // string data type
 
 var x,y,z;
-x=10; // primitive
-x = 16;
-var x= 10;
+x=10; // primitive  => immutable
+
+var x = 16;
+
+x = 17
+var x= '10';
 
 z = x+y;
 
-var obj = { // complex data type
-    name:'Divyansh'
+var obj = { // complex data type => mutable
+    name:'abhishek'
 }
+
+obj = {
+    city:'kanpur'
+}
+
 
 obj.name = "abhishek";
 obj = null;

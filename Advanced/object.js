@@ -118,6 +118,8 @@ const person = {
     }
 }
 
+// *********************
+
 // creating an object
 const newObj = Object.create(person);
 

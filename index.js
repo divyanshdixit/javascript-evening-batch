@@ -4,7 +4,8 @@ var a = 10; var b= 20; // declartion, definition
 var c;
 c = a + b;
 
-console.log(c);
+document.getElementById('demo').style.fontSize = '14px'
+console.log();
 
 // =============
 
