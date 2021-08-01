@@ -22,53 +22,64 @@ var g = 20;
 var g ; // 20
 console.log(g);
 
+// var x , window.x global object => global scope
+
+// let y , window.y => not used as global scope
+
 // // let, const => block scope (es2015) es6
 
 // // function scope(local), global scope before es2015
 
-// // Re-declaration using let and var:
+// Re-declaration using let and var:
 
-// var d = 10;
-// console.log(d);
-// {
-//     let d = 2; // use var and let both
-//     console.log(d);
-// }
-// console.log(d);
+console.log('***')
+var d = 10; // global scope
+console.log(d);
 
 
+{
+    let d = 2; // use var and let both
+    // d = 5;
+    console.log(d);
+}
+console.log(d);
+
+console.log('***')
 // // loop scope: let will give only block scope 
 
-// var i =5;
+var i =5;
 
-// for(var i=0; i<2;i++){ // use let instead will change the result (i will visible to all over the script using var)
-//     console.log(i); // 0, 1, 
-// }
+for(var i=0; i<2;i++){ // use let instead will change the result (i will visible to all over the script using var)
+    console.log(i); // 0, 1, 
+}
 
-// console.log(i);
+console.log(i);
+
+console.log('***')
 
 // // "var" belong to window Object(global scope) but let and const will not the part of window 
 
-// var fname = "Divyansh";
-// console.log(fname);
+var fname = "Divyansh";
+console.log(fname);
 // console.log(window.fname); // both gives same result
 
-// let lname = "Dixit";
-// console.log(lname);
+let lname = "Dixit";
+console.log(lname);
 // console.log(window.lname); // will not give same result
 
 
-// // Re-declare "var" with "let" in same scope and block:
+// Re-declare "var" with "let" in same scope and block:
 
-// var f = 2;
+var f = 2;
 // let f = 3; // not allowed
+console.log(f)
+{
+    var f = 4; // allowed
+    // let f = 5; // not allowed
+    console.log(f)
+}
 
-// {
-//     var f = 4; // allowed
-//     let f = 5; // not allowed
-// }
-
-// console.log(f)
+console.log(f)
 
 
 // // Re-declare "let" variable with "let" in same block and scope
@@ -91,7 +102,7 @@ console.log(g);
 //     var x = 5; // not allowed
 // }
 
-// // Re-declare variable with "let" in another scope or block is allowed:
+// Re-declare variable with "let" in another scope or block is allowed:
 
 // let x = 2;
 
@@ -107,34 +118,51 @@ console.log(g);
 // }
 
 
-// // Hoisting: 
+// Hoisting: 
 
-// // var => top hoisted, can be initalised at any Time
+// var => top hoisted, can be initalised at any Time
 
-// // can be use the variable before it is declared
-// a = 10;
-// console.log(a)
-// var a;
+// can be use the variable before it is declared
 
-// // hoisting using let: hoisted on top but not initalized
+console.log("***")
+a = 10;
+console.log(a)
+var a;
 
-// fname = "Divyansh";
-// console.log(fname);
+// hoisting using let: hoisted on top but not initalized
+
+var fname = "Divyansh";
+console.log(fname);
 // let fname; // gives reference error
 
 
-// // Const:  
+
+// Const:  
 // // let name;
 // // var name;
-// // const name = "Divyansh"
+// const name = "Divyansh";
+
+// const obj = {
+//     name : "div"
+// }
+
+// obj.name = "asdasdasd"
+
+// const obj = null
+
+// reference const 
+
+// value is not const 
 
 // // it defines a constant reference to value (that's why we cant change the primitive value but we can change the props of const object)
 
-// var x = 10;
-// {
-//     const x = 20;
-// console.log(x)  // 20
-// }
+var x = 10;
+{
+    const x = 20;
+console.log(x)  // 20
+}
+
+// ***************************
 
 // // Primitive value: that has single data value not have props or methods
 // // Number, strings, boolean, undefined

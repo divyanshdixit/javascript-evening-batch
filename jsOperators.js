@@ -15,29 +15,37 @@ var f = 10
 
 // comparison opertor => (==, ===, !==, !=) => 
 
-"Divyansh" == "Divyansh"
+"Divyansh" == "Divyansh" => true
 
-25 == "25" true
-25 === "25" false
+25 == "25" => true
+25 === "25" (value , data type ) => false
 
 // ternary operator => ? :
+() ? (  () ? '' : '' ) : ''
 
 // logical operator (&&, ||, !)
 
 ("Divyansh" == "Divyansh" && 25 == "25") => true && true => true
 ("Divyansh" == "Divyansh" || 25 == "25") => true || true => true
 ("Divyansh" == "Divyansh" || 25 == "25") => true || false => true
-("Divyansh" == "Divyansh" || 25 == "25") => false || false => false
+("Divyansh" === "Divyansh" || 25 === "25") => false || false => false
 
+
+// typeof operator, instanceof operator
 var x = "Divyansh";
-typeof x; //
+typeof x; // String, Number, Object
 
 
-x.instanceof "string" // true , false
+x.instanceof "Array" // true , false
 
-var name 
+// js is case senstive 
+var name
 var Name
 
 n, _, $
 
+// number as a first letter can not be used for variable name 
+
 var $
+
+
