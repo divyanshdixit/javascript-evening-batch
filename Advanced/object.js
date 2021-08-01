@@ -157,8 +157,8 @@ var detail = {
 }
 
 /*
-Object.defineProperty(objectname, propname, {value:"newchanged value"} )
-Object.defineProperties(objectname, {
+Object.defineProperty(objectname, propname, {value:"newchanged value"} ) // add r modifies single prop
+Object.defineProperties(objectname, {  // add r modifies one or more props
     propname:{
         value:"",
         writable:true
@@ -211,5 +211,5 @@ console.log(Object.getPrototypeOf(newObj) == person)
 // get all enumerable properties as an array => (it'll get all the property for enumerable property is true)
 console.log(Object.keys(detail));
 
-
+// Object.keys(), Object.values(), Object.entries()
 // Protecting props of an object:-
