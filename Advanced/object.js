@@ -109,33 +109,78 @@ for(let i in obj.hobbies){
         console.log(obj.hobbies[i].categories[x]);
     }
 }
-/*
+
+
+
+// *********************
+
+// creating an object (es5);
+
+// create new object
+//  using an existing object
+//  as the prototype of new created object
+
+// const a = {
+//     lname: 
+// }
 
 const person = {
     fname:"Divyansh",
     name: function(){
-        console.log(`${this.fname} ${this.lname}`);
+        console.log(this.fname +  this.lname );
     }
 }
 
-// *********************
-
-// creating an object
 const newObj = Object.create(person);
 
+console.log('************');
+
+console.log(newObj);
+
+// add new prop in new object
 newObj.lname = "Dixit";
+
+// new property is set on new object but it'll not accessible over original object or prototype
+console.log(newObj.fname);
+
 newObj.fname = "Abhishek";
 
-console.log(person.lname);
-newObj.name()
+console.log(newObj.fname);
+
+newObj.name();
+person.name();
+
 
 // adding or changing object property:
+var detail = {
+    fname:'Divansh'
+}
 
-Object.defineProperty(person, 'fname', {value:"Changed"})
-console.log(person.fname);
+/*
+Object.defineProperty(objectname, propname, {value:"newchanged value"} )
+Object.defineProperties(objectname, {
+    propname:{
+        value:"",
+        writable:true
+    },
+    propname2:{
+        value:'',
+        writable:false,
+        enumerable:true
+    }
+})
+Object.getOwnPropertyDescriptor(person, 'city') //=> value, writable, enumerable, configurable
+Object.getOwnPropertyNames(person) //=> return all props as an array, regardless of enumerable  
+Object.getPrototypeOf(newObj) //=> return the prototype of the object(value of internal prototype)
+Object.keys(person) // => retun all props as array with enumerable prop is true
+*/
+
+Object.defineProperty(detail, 'fname', {value:"abhi"})
+console.log(detail.fname);
 
 // adds or modifies one or more props direclty on an object
-Object.defineProperties(person,{
+
+Object.defineProperties(detail,{
     fname:{
         value:'Changed again',
         writable:true
@@ -147,25 +192,24 @@ Object.defineProperties(person,{
         enumerable:false
     }
 })
-console.log(person.fname, person.city);
+console.log(detail.fname, detail.city);
 
 
-// 
-console.log(Object.getOwnPropertyDescriptor(person, 'city'))
+console.log(Object.getOwnPropertyDescriptor(detail, 'city'))
 
 
 // get all the properties as an array :
 
-console.log(Object.getOwnPropertyNames(person));
+console.log(Object.getOwnPropertyNames(detail));
 
 
 // get the prototype of specified object:
 
-console.log(Object.getPrototypeOf(newObj))
+console.log(Object.getPrototypeOf(detail))
 console.log(Object.getPrototypeOf(newObj) == person)
 
-
 // get all enumerable properties as an array => (it'll get all the property for enumerable property is true)
-console.log(Object.keys(person));
+console.log(Object.keys(detail));
 
-*/
+
+// Protecting props of an object:-
