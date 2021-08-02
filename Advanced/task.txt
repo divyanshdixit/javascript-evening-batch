@@ -1,0 +1,6 @@
+make calculator app using Object.defineProp
+
+add, 
+subst
+mul
+divide

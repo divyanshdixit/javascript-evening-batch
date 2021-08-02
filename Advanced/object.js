@@ -173,6 +173,15 @@ Object.getOwnPropertyDescriptor(person, 'city') //=> value, writable, enumerable
 Object.getOwnPropertyNames(person) //=> return all props as an array, regardless of enumerable  
 Object.getPrototypeOf(newObj) //=> return the prototype of the object(value of internal prototype)
 Object.keys(person) // => retun all props as array with enumerable prop is true
+
+// protecting properties:
+Object.preventExtensions(object); => prevent adding properties to an object
+Object.isExtensible(object) => check if prop can be added to an object or not , if yes it return true
+Object.seal(object) => prevent modifies attributed of existing prop(but you can change the values of existing object), and prvent adding new props(not values)
+Object.isSealed(object) => retun true if object is sealed
+Object.freeze(object) => prevent any changes to an object
+Object.isFrozen(object) => return true if object is frozen.
+
 */
 
 Object.defineProperty(detail, 'fname', {value:"abhi"})
@@ -213,3 +222,103 @@ console.log(Object.keys(detail));
 
 // Object.keys(), Object.values(), Object.entries()
 // Protecting props of an object:-
+
+var cobj = {
+    name:'divyansh'
+}
+
+var other = {
+    lname:'asdas'
+}
+
+cobj.city = "knaur";
+
+console.log(cobj);
+
+// prevent adding prop to an object
+Object.preventExtensions(cobj);
+
+cobj.lname = "dixit";
+console.log(cobj, '***');
+console.log(Object.getOwnPropertyDescriptor(cobj,'name'));
+
+
+// 
+console.log( Object.isExtensible(cobj))
+console.log( Object.isExtensible(other))
+
+// 
+
+Object.seal(cobj);
+
+// Object.defineProperty(cobj, "name", {enumerable:false})
+// console.log(Object.getOwnPropertyDescriptor(cobj,'name'));
+
+Object.seal(other)
+other.fname = "divyansh";
+other.lname = "changed";
+console.log(other);
+
+console.log(Object.isSealed(cobj))
+console.log(Object.isSealed(other))
+
+// 
+
+Object.freeze(other);
+other.lname = "changed again";
+console.log(other);
+
+console.log(Object.isFrozen(cobj));
+console.log(Object.isFrozen(other));
+
+
+// adding getter and setter using Object.defineProperty()
+
+// Object.defineProperty(objectName, "fullName", {
+    // get : function() {
+    //     return this.fname + this.lname;
+    // }
+
+    // set : function(params) {
+    //     this.city= params
+    // }
+// })
+
+var getSetObj = {
+    fname:'divyansh',
+    lname:'dixit',
+    city:''
+}
+
+Object.defineProperty(getSetObj, 'fullName', {
+    get : function() {
+        return this.fname + this.lname;
+    }
+})
+
+Object.defineProperty(getSetObj, 'setCity', {
+    set : function(cityName) {
+        this.city = cityName
+    }
+})
+
+// access get property
+console.log(getSetObj.fullName);
+
+// access set props
+
+getSetObj.setCity = 'kanpur';
+
+console.log(getSetObj)
+
+
+// 
+
+var kj = {
+    name:'sdasasdas',
+    age:25
+}
+
+console.log(Object.keys(kj)) // => return array of keys 
+console.log(Object.values(kj)) // => return array of values
+console.log(Object.entries(kj)) // => return array of array of key-value pair
