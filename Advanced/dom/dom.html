@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="para"> paragraph  </p>
+
+    <p id="result"> </p>
+
+    <span> outer span </span>
+
+    <p id="intro">
+        <span class="intro"> span with intro class </span> 
+        <span> inner span </span>
+        <span> inner span </span>
+        <span> inner span </span>
+        <span> inner span </span>
+        <span> inner span </span>
+    </p>
+    
+    <h1 class="intro"> heading intro</h1> 
+    
+    <input type="text" name="fname" placeholder="fname"/>
+    <input type="text" name="lname" placeholder="lname"/>
+
+    <input type="text" name="lname" placeholder="Full name "/>
+
+<!--
+    <p id="res"> </p>
+
+    <form id="form1">
+        fname: <input type="text" value="divyansh" name="fname"/>
+        fname: <input type="text" value="dixit" name="fname"/>
+
+        <input type="button" value="submit"/>
+    </form> -->
+
+    <script>
+        var obj = {
+            name:'divyansh'
+        }
+        // element by id :
+        const elem = document.getElementById('para');
+        document.getElementById('result').innerHTML = elem;
+        console.log(elem);
+
+
+        // element by tag name:
+        const inner = document.getElementById('intro');
+        
+        const tagElem = inner.getElementsByTagName('span');
+        
+        // const tagElem = document.getElementsByTagName('span');
+        document.getElementById('result').innerHTML = tagElem;
+        console.log(tagElem);
+
+
+        // element by class name:
+        const classElem = document.getElementsByClassName('intro');
+        document.getElementById('result').innerHTML = classElem;
+        console.log(classElem);
+
+        // html collection is only looks like array not work as an array :
+
+        // const lnames = document.getElementsByName('fname');
+        // const lnames = document.getElementsByName('lname');
+
+        // document.getElementById('result').innerHTML = names + lnames;
+
+        // console.log(names, lnames, typeof names, names instanceof Array);
+
+        // lnames.forEach(element => {
+        //     console.log(element);
+        // });
+
+        // // using query selector:
+
+        // const q= document.querySelectorAll('.intro');
+        // document.getElementById('res').innerHTML = q;
+        // console.log(q);
+
+
+        // // find by html object collection
+        // const formElm = document.forms['form1']; // find form element by its id
+        // console.log(formElm.length);
+        // // document.getElementById('res').innerHTML = formElm;
+        // console.log(formElm.elements); // [object html form control collections]
+
+    </script>
+</body>
+</html>
