@@ -7,13 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <p id="para"> paragraph  </p>
+    localStorage.setItem('username', val);
+    localStorage.getItem('username');
+
+    <p id="para" > paragraph  </p>
 
     <p id="result"> </p>
 
     <span> outer span </span>
 
+    <div id="somediv">
     <p id="intro">
         <span class="intro"> span with intro class </span> 
         <span> inner span </span>
@@ -22,6 +25,7 @@
         <span> inner span </span>
         <span> inner span </span>
     </p>
+    </div>
     
     <h1 class="intro"> heading intro</h1> 
     
@@ -31,15 +35,29 @@
     <input type="text" name="lname" placeholder="Full name "/>
 
 <!--
-    <p id="res"> </p>
+    <p id="res"> </p> -->
 
-    <form id="form1">
+    <form id="form1" name="form1" >
         fname: <input type="text" value="divyansh" name="fname"/>
-        fname: <input type="text" value="dixit" name="fname"/>
+        fname: <input type="text" value="dixit" name="lname"/>
 
         <input type="button" value="submit"/>
-    </form> -->
+    </form> 
+    <form id="form2" name="form1" >
+        fname: <input type="text" value="divyansh" name="fname"/>
+        fname: <input type="text" value="dixit" name="lname"/>
 
+        <input type="button" value="submit"/>
+    </form> 
+
+    <a href="#"> First anchor </a>
+    <a href="#" name="Second"> Second anchor </a>
+
+    <img src=""/>
+    <img src=""/>
+
+
+    <script src="../map_object.js"> </script>
     <script>
         var obj = {
             name:'divyansh'
@@ -78,18 +96,42 @@
         //     console.log(element);
         // });
 
-        // // using query selector:
+        // Find by css selector(query selector):
 
-        // const q= document.querySelectorAll('.intro');
-        // document.getElementById('res').innerHTML = q;
-        // console.log(q);
+        const q= document.querySelectorAll('.intro'); // Node list
+        const l= document.querySelector('.intro'); // single html element
+        
+        // using multiple class, id, or tag name
+        // const q= document.querySelectorAll('#somediv p .intro');
+        document.getElementById('result').innerHTML = q + l;
+        console.log(q, l);
+        
+        // find by html object collection:
+        const formElm = document.forms; // find form element by its id
+        console.log(formElm.length);
+        document.getElementById('result').innerHTML = formElm;
+        console.log(formElm.elements); // [object html form control collections]
 
+        // console.log(document.scripts.innerHTML, .length);
+        // Html object collection:
+        /*
+            document.forms => length of forms
+            document.title => return the title of the document
+            document.body => html body element, to get the innerHTML use document.body.innerHTML
+            document.anchors => return the no of anchors element which have "name" attribute 
+            document.links => return object of anchro elemnt which have links , length property to get the length
+            document.images => retunr the obect of image element , to get the legth use length property
+            document.scripts => return the object of scripts , to get the innerHTML use innerHTML property and for length
 
-        // // find by html object collection
-        // const formElm = document.forms['form1']; // find form element by its id
-        // console.log(formElm.length);
-        // // document.getElementById('res').innerHTML = formElm;
-        // console.log(formElm.elements); // [object html form control collections]
+        */
+        // var arr = [1,2,3,4,5];
+        // arr.forEach((val, index) => {
+        //     if(index > 3){
+        //         break;
+        //     }else{
+        //         continue
+        //     }
+        // });
 
     </script>
 </body>
