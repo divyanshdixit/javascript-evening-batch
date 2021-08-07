@@ -1,6 +1,15 @@
-make calculator app using Object.defineProp
-
+make calculator app using Object.defineProperty
 add, 
 subst
 mul
 divide
+
+captialize code for every word in phrase
+
+
+a        abc         abcd        abcde       abcdef
+
+[a_]    [ab, c_]    [ab,cd]    [ab,cd, e_]  [ab,cd, ef]
+
+
+Prototype:- 
