@@ -10,7 +10,7 @@
     localStorage.setItem('username', val);
     localStorage.getItem('username');
 
-    <p id="para" > paragraph  </p>
+    <p id="para" class="first second third"> paragraph  </p>
 
     <p id="result"> </p>
 
@@ -29,7 +29,7 @@
     
     <h1 class="intro"> heading intro</h1> 
     
-    <input type="text" name="fname" placeholder="fname"/>
+    <input type="text" name="fname" id="fname" placeholder="fname"/>
     <input type="text" name="lname" placeholder="lname"/>
 
     <input type="text" name="lname" placeholder="Full name "/>
@@ -59,6 +59,9 @@
 
     <script src="../map_object.js"> </script>
     <script>
+
+        // getting the dom elements
+
         var obj = {
             name:'divyansh'
         }
@@ -132,6 +135,37 @@
         //         continue
         //     }
         // });
+
+        // changing dom element content and attributes:
+
+        // innerHTML
+
+        // data-attribute- html
+        // document.getElementById('image').attributeName= 'new value'
+        
+        var paraid = document.getElementById('para');
+        // paraid.addEventListener('click', (e) => {
+        //     paraid.id = "newid";
+        //     // paraid.classList. = "newclass";
+        //     console.log(paraid)
+        // }) // event bubbling, event capturing , event propagation
+        
+        var finput = document.getElementById('fname');
+        finput.addEventListener('click', (event) => {
+            console.log(event)
+            finput.type="email";
+            console.log(finput);
+        })
+
+        // add and remove class 
+        console.log(paraid.classList.remove('third'));
+        console.log(paraid.classList.add('third'));
+        
+
+        // change html style:-
+
+        document.getElementById('para').style.fontSize = '50px';
+
 
     </script>
 </body>

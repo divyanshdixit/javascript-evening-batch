@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="para"> </p>
+    <!-- html event  -->
+    <button onclick="clickfunction(this)"> Click me </button>
+
+    <!-- html dom event  -->
+    <p id="para-dom"> </p>
+    <button id="btn"> Click me </button>
+
+    <script>
+        clickfunction = (elem) => {
+            console.log(elem);
+
+            // let para = document.getElementById('para');
+            elem.innerHTML = 'Clicked';
+            elem.style.borderColor = 'red'
+        }
+        
+        domClickFunction = () => {
+
+        }
+
+        document.getElementById('btn').onclick = domClickFunction;
+
+        // onload, onunload (browser related info)
+
+
+    </script>
+</body>
+</html>

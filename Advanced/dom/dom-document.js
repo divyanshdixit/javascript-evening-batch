@@ -68,4 +68,12 @@ if elements is found, method will return all founded elements in an HTML COLLECT
 
 6- by html object collection
 
+
+2- Changing html content:
+
+    1- innerHTML
+    2- innerTEXT
+
+    3- attribute
+
 */
