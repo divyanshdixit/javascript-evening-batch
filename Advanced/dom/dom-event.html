@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onunload="unloading()">
     
     <p id="para"> </p>
     <!-- html event  -->
@@ -17,6 +17,17 @@
     <button id="btn"> Click me </button>
 
     <script>
+        unloading = () => {
+            alert('Do you want to leave the page')
+        }
+        document.getElementsByTagName('body')[0].onunload = unloading()
+
+        // function loading(){
+        //     alert('loading finsihed')
+        // }
+
+        
+
         clickfunction = (elem) => {
             console.log(elem);
 
@@ -25,11 +36,14 @@
             elem.style.borderColor = 'red'
         }
         
-        domClickFunction = () => {
+        domClickFunction = (e) => {
+            console.log(e, this);
+            document.getElementById('btn').innerHTML = 'Clicked'
 
         }
 
         document.getElementById('btn').onclick = domClickFunction;
+
 
         // onload, onunload (browser related info)
 
