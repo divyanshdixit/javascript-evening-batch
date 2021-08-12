@@ -102,6 +102,7 @@ function clickFunction(){
 // attaches an event handler on html elemnt
 // this method attach event handler wihtout overwriding existing event handlers
 // when we want to use event Capturing
+// event listener can add to any DOM object not only html event (window object)
 
 EVENT NAME:
 

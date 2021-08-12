@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+           border:2px solid red;
+           background-color: grey; 
+           width: 200px;
+           height: 200px;
+           padding-top: 30px;
+        }
+        #child{
+           border:2px solid rgb(0, 47, 255);
+           background-color: green;
+           width: 100px;
+           height: 100px; 
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <p id="p1"> Some para </p>
+
+    <button id="btn" onclick="click1()"> Click Me </button>
+
+
+    <!-- Event Propagation Structure -->
+
+    <!-- 
+        First case:
+
+            1- parent => 
+
+            parent call
+
+            2- child =>
+
+            child call
+            parent call
+
+        Second case:
+
+        1- parent => 
+            parent call
+
+        2- Child => 
+            parent 
+            child
+
+        The event propagation mode determines in which order the element receivs the event
+
+
+        ***** => up to down => capture phase (Event capturing)
+
+        Window
+        Document
+        html
+        body
+        div
+        button
+
+
+        **** Down to up => Bubble phase (event bubbling)
+
+        button
+        div
+        body
+        html
+        Document
+        window
+
+
+        // EVENT CAPTURING: TRICKLING
+
+        with event caputring the event is first captured by the outermost element & propagatedd to the inner elements
+
+
+        // EVENT BUBBLING :
+
+        with event bubbling the event is first captured by the innermost element & propagatedd to the outer elements
+
+     -->
+    <div id="parent">
+
+        <div id="child">
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        click1 = () => {
+            console.log('first click event fire');
+        }
+
+        click2 = () => {
+            console.log('Second click event fire');
+        }
+
+        click3 = () => {
+            console.log('Third click event fire');
+        }
+
+        parentDiv = (p1,p2) => {
+            alert('parent div', + p1 + p2);
+        }
+
+        childDiv = () => {
+            alert('Child div');
+        }
+
+        document.getElementById('btn').addEventListener('click', click2);
+        document.getElementById('btn').addEventListener('click', click3);
+
+        document.getElementById('parent').addEventListener('click', parentDiv, true); // useCapture => true
+        document.getElementById('child').addEventListener('click', childDiv, true ); // if not true means it's use bubble phase
+        document.getElementById('child').addEventListener('click', () => { parentDiv(2,3)} ); // if not true means it's use bubble phase
+    </script>
+</body>
+</html>
