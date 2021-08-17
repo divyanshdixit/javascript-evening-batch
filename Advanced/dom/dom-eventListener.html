@@ -94,6 +94,7 @@
 
     </div>
 
+    <h1> This is heading! </h1>
 
 
     <script>
@@ -123,6 +124,27 @@
         document.getElementById('parent').addEventListener('click', parentDiv, true); // useCapture => true
         document.getElementById('child').addEventListener('click', childDiv, true ); // if not true means it's use bubble phase
         document.getElementById('child').addEventListener('click', () => { parentDiv(2,3)} ); // if not true means it's use bubble phase
+
+
+        // removeEventListener('event', listener) => remove event and listern both from element
+
+        // forEach()
+        
+        
+// hoisting
+        var moveFunction = () => {
+            console.log(Math.random());
+            console.log(Number((Math.random()*10).toFixed(0))); // 0-1, 1*5 => 0.54444 * 10 => 5.44444 
+            // string
+        }
+        document.getElementById('child').addEventListener('mousemove', moveFunction)
+        var child = document.getElementById('child');
+        var remove = () => {
+            child.removeEventListener('mousemove', moveFunction)
+        }
+        document.getElementsByTagName('h1')[0].addEventListener('click', remove);
+
+        // Node list
     </script>
 </body>
 </html>

@@ -8,7 +8,7 @@ console.log(num.toExponential())
 console.log(num.toExponential(6))
 
 
-// toFixed() => retrun a string , with the no writtern with a specified no of char after period
+// toFixed() => retrun a string , with the no. written with a specified no of char after period
 
 var x = 9.767;
 console.log(x.toFixed())
@@ -40,7 +40,7 @@ console.log(y.toPrecision(6));
 
 console.log(Number(true)) 
 console.log(Number(false)) 
-console.log(Number("10")) 
+console.log(Number("10"))  // 10
 console.log(Number(" 10")) 
 console.log(Number(" 10 20 ")) 
 console.log(Number("10 ")) 
