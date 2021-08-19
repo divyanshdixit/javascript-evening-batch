@@ -1,0 +1,53 @@
+<!-- 
+    // Node list:- (DOM nodes):
+
+        // with the html dom we can navigate the node tree using node relation (parent, child, sibling)
+        // everything in an html document is a node
+
+        // root node (top node)
+        // every node has exactly one parent , except root node
+        // node can have number of children
+        // sibling are nodes with same parent
+
+        // Navigating to other node:
+
+        // parentNode,
+        // childNodes[nodeNumber],
+        // firstChild,
+        // lastChild,
+        // nextSibling,
+        // previousSibling
+
+        // nodeValue, innerHTML
+
+        document.getElementById('div').firstChild.nodeValue
+        document.getElementById('div').getElementsByTagName('p')[0].innerHTML 
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     
+    <div class="firstDiv">
+        <p> First child </p>
+        <p> Second child </p>
+
+        <!-- <h1> First heading </h1> --> <!-- comment node-->
+    </div>
+
+    <script>
+        var firstDiv = document.getElementsByClassName('firstDiv')[0];
+        console.log(firstDiv)
+        console.log(firstDiv.firstChild.nodeValue)
+        console.log(firstDiv.lastChild)
+        // console.log(firstDiv.firstChild.firstChild.nodeValue)
+    </script>
+ </body>
+ </html>

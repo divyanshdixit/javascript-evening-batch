@@ -17,10 +17,10 @@ when web page is loaded, browser create a dom of the page (as tree of objects)
                             HTML(ROOT) 
                 HEAD                        BODY
                 TITLE                    DIV                <a>
-                TEXT                P         H1     HREF(ATTRIBUTE)   TEXT
+                TEXT (TextNode)          P         H1     HREF(ATTRIBUTE)   TEXT
                                 TEXT        TEXT
 
-
+<h1> asdasddsadsa </h1>
 js can create dynamic html using dom:
 change html element 
         html attributes

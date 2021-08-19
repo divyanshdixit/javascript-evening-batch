@@ -12,4 +12,54 @@ a        abc         abcd        abcde       abcdef
 [a_]    [ab, c_]    [ab,cd]    [ab,cd, e_]  [ab,cd, ef]
 
 
-Prototype:- 
+
+----- New Task ------
+
+find maximum value in given array 
+[ 1, 4, 5,9, 10, 3, 2, 20, 1] => 20
+
+// ========>
+
+program for reverse the string and number:
+
+"Divyansh" => "hsnayviD"
+
+12345 => 54321
+
+ // ========>
+
+[ 1, 4, 5,9, 10, 5, 4, 20, 1, 9]
+
+1- reverse array without using reverse function
+
+2- get Duplicate item's value and 3- it's index
+Duplicate number => [1,4,5,9], Combination of index and number => [ [0, 1], [8, 1], [1,4] [6,4] ] , Index = [0,1,2,3]
+
+// =========>
+
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+"camelCasing"  =>  "camel Casing"
+"camelCasingTest"  =>  "camel Casing Test"
+"identifier"   =>  "identifier"
+""             =>  ""
+
+
+// =======>
+
+What is an anagram? Well, two words are anagrams of each other if they both contain the same letters. For example:
+
+'abba' & 'baab' == true
+
+'abba' & 'bbaa' == true
+
+'abba' & 'abbba' == false
+
+'abba' & 'abca' == false
+Write a function that will find all the anagrams of a word from a list. You will be given two inputs a word and an array with words. You should return an array of all the anagrams or an empty array if there are none. For example:
+
+anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']) => ['aabb', 'bbaa']
+
+anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', 'racer']
+
+anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
