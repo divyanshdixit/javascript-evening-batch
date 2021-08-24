@@ -1,0 +1,78 @@
+<!-- 
+    creating new html elements (Nodes)
+    replace with new html
+    remove from document
+
+ -->
+
+ <!-- creating a node -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <div id="div1">
+         <p id="para1"> Para 1</p>
+         <p id="para2"> Para 2</p>
+     </div>
+
+     <script>
+        //  creating a new element : createElement()
+        
+        const para =  document.createElement('p');
+        const textNode =  document.createTextNode('Para 5');
+
+        // appendChild() method append child in last 
+        para.appendChild(textNode);
+
+        const div1 = document.getElementById('div1')
+        div1.appendChild(para);
+
+
+        //  create an element and insert before the element:
+        
+        const para3 = document.createElement('p');
+        const text = document.createTextNode('Para 3');
+
+        para3.appendChild(text);
+
+        const childElem = document.getElementsByTagName('p')[2];
+
+        // insertBefore() => insert element before the desired element 
+        div1.insertBefore(para3, childElem);
+
+
+        // replace html element using replaceChild(newElement, oldElement):
+
+        const para4 = document.createElement('p');
+        const text4 = document.createTextNode('Para 4');
+
+        para4.appendChild(text4);
+        const old = document.getElementsByTagName('p')[3];
+
+        // replaceChild(new, old) => replace element with desired element
+        div1.replaceChild(para4, old);
+
+
+        // remove element from document using remove() method:
+
+        // document.getElementById('para1').remove();
+
+        // remove() doesn;t work in old browser so we use removeChild() method insted of remove()
+
+        const innerChild =  document.getElementById('para1');
+        // div1.removeChild(innerChild);
+
+        // find the parent of child and the use removeChild() to remove the child:
+        
+        innerChild.parentNode.removeChild(innerChild);
+
+
+     </script>
+ </body>
+ </html>

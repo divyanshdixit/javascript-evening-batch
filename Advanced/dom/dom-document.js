@@ -5,22 +5,24 @@ DOM - DOCUMENT OBJECT MODEL
 w3c standard:
 
 html dom
-xml dom
+xml dom => xml
+
 core dom -> any type of document
 
-using it, js can chnage & access all the elements of html elements
+using it, js can chnage & access all the elements of html Dom
 
 when web page is loaded, browser create a dom of the page (as tree of objects)
-                            WINDOW
+                             WINDOW
                             DOCUMENT
 
                             HTML(ROOT) 
                 HEAD                        BODY
                 TITLE                    DIV                <a>
                 TEXT (TextNode)          P         H1     HREF(ATTRIBUTE)   TEXT
-                                TEXT        TEXT
+                                        TEXT      TEXT
 
 <h1> asdasddsadsa </h1>
+
 js can create dynamic html using dom:
 change html element 
         html attributes
@@ -64,7 +66,7 @@ if elements is found, method will return all founded elements in an HTML COLLECT
 
 4- by name(dom node)
 
-5- by css selectors
+5- by css selectors (. , #)
 
 6- by html object collection
 

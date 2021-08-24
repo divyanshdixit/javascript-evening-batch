@@ -35,19 +35,64 @@
  </head>
  <body>
      
-    <div class="firstDiv">
-        <p> First child </p>
-        <p> Second child </p>
+    <!-- 
+
+        p => element node
+        text => text node 
+        attribute => attibute node 
+     -->
+    <div class="firstDiv"> 
+        <p id="firstPara"> First child </p>
+        <p id="second"> Second child </p> 
+        <p id="second"> Second child </p> 
+        <p id="second"> Second child </p>
+        <p id="second"> Second child </p>
 
         <!-- <h1> First heading </h1> --> <!-- comment node-->
     </div>
 
     <script>
         var firstDiv = document.getElementsByClassName('firstDiv')[0];
-        console.log(firstDiv)
-        console.log(firstDiv.firstChild.nodeValue)
-        console.log(firstDiv.lastChild)
+        // accessing the innerText/innerHTML  prop is same as accessing the nodeValue of the fist child
+
+        // var firstVal = document.getElementsByTagName('p')[0].innerHTML 
+        // console.log(firstVal)
+
         // console.log(firstDiv.firstChild.firstChild.nodeValue)
+        console.log(document.getElementById('firstPara').firstChild.nodeValue)
+        // console.log(firstDiv.lastChild.firstChild.nodeValue)
+        console.log(document.getElementById('second').firstChild.nodeValue)
+
+        // nodeName property:
+        // specifics the name of node
+        // read only 
+        // nodeName of element node is tag Name (but in capital letters always) P, H1
+        // nodeName of text node is "#text". 
+        // nodeName of attribute node is attribute name
+        // nodeName of document node is #document
+
+
+        // nodeValue property:
+
+        // specifics the value of node
+        // nodeValue of element node is null
+        // nodeValue of text node is text itself. 
+        // nodeValue of attribute node is attribute value
+
+
+        // nodeType property:
+
+        // read only 
+        // return type of node
+
+        // element node => 1 
+        // attribute node => 2 (deprected )
+        // text node => 3
+        // comment node => 8
+        // document node => 9
+        // doucmnet_type_node= 10 <!DOCTYPE >
+
+
     </script>
  </body>
  </html>
